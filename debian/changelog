@@ -1,5 +1,5 @@
 gsimplecal (0.8-1) unstable; urgency=low
 
-  * Initial release
+  * Initial release (Closes: #633342)
 
- -- Julien Valroff <julien@debian.org>  Sat, 09 Jul 2011 14:02:12 +0200
+ -- Julien Valroff <julien@debian.org>  Sat, 09 Jul 2011 15:09:37 +0200
