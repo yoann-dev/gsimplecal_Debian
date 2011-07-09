@@ -11,6 +11,7 @@ Vcs-Browser: http://git.kirya.net/?p=debian/gsimplecal.git;a=summary
 Package: gsimplecal
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Suggests: tint2, openbox
 Description: lightweight GUI calendar application
  gsimplecal is a lightweight calendar application written in C++ using GTK2.
  .
