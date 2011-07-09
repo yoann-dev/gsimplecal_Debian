@@ -1,0 +1,27 @@
+2011-04-03: v0.8:
+- Fix segmentation fault in the clock
++ Add keyboard bindings to go to the current date
+
+2011-03-26: v0.7:
++ Mark today even when selecting some other day
+
+2010-10-18: v0.6:
++ Add next_month and prev_month command line arguments
++ Add more config options (see man page)
+
+2010-07-13: v0.5:
++ Add keyboard shortcuts to close the gsimplecal
+* Add program crashes handling
++ Add keyboard shortcuts to switch months and years
+
+2010-05-29: v0.4:
++ Use semaphores instead of libunique
+
+2010-03-27: v0.3:
++ Migrate to autotools
+
+2010-03-22: v0.2:
++ World clocks
+
+2009-07-04: v0.1:
++ Calendar

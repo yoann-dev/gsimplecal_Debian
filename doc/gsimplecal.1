@@ -1,0 +1,183 @@
+.TH GSIMPLECAL 1 "2010-10-10"
+.SH NAME
+gsimplecal \- lightweight calendar applet
+
+
+.SH SYNOPSIS
+.B gsimplecal
+.br
+.B gsimplecal
+next_month
+.br
+.B gsimplecal
+prev_month
+
+
+.SH DESCRIPTION
+This manual page documents the usage of the
+.B gsimplecal
+command.
+
+.PP
+.B gsimplecal
+is a lightweight calendar applet. When it is started, it first shows up, when
+you run it again, it closes the running instance. It was intentionally made for
+use with tint2 panel to be launched upon clock click, but of course it will
+work without it, you can bind it to some hotkey in you window manager, for
+example.
+
+.PP
+When you provide one of the arguments —
+.B next_month
+or
+.B prev_month
+— instead of closing the running instance, the displaying month is changed.
+
+
+.SH CONFIGURATION
+.PP
+You may configure gsimplecal to display different world timezones clocks.
+To make it, you should create
+.nh
+\fB$XDG_CONFIG_HOME/gsimplecal/config\fP
+.ny
+file (usually it will be
+.nh
+~/.config/gsimplecal/config)
+.ny
+with the following contents:
+
+.IP
+show_calendar = 1
+.br
+show_timezones = 1
+.br
+mark_today = 1
+.br
+clock_format = %a %d %b %H:%M
+.br
+mainwindow_decorated = 0
+.br
+mainwindow_keep_above = 1
+.br
+mainwindow_sticky = 0
+.br
+mainwindow_skip_taskbar = 1
+.br
+mainwindow_position = none
+.br
+clock_label = UTC
+.br
+clock_tz = :UTC
+.br
+clock_label = Local
+.br
+clock_tz = 
+
+.PP
+The options are pretty self explanatory, but here is detailed description:
+
+.TP 5
+\fBshow_calendar\fP: 1 or 0, defaults to 1.
+Sets whether the calendar should be shown. Most users want this option to be 1.
+
+.TP 5
+\fBshow_timezones\fP: 1 or 0, defaults to 0.
+Sets whether the different timezone clocks should be shown.
+
+.TP 5
+\fBmark_today\fP: 1 or 0, defaults to 1.
+Sets whether today's date will be marked in the calendar (besides the default
+selection, i.e. when you click on the other day, today will remain marked
+somehow, e.g. in bold print).
+
+.TP 5
+\fBclock_format\fP: string
+Sets the clocks format. Look \fIman strftime\fP for the possible formats.
+
+.TP 5
+\fBmainwindow_decorated\fP: 1 or 0, defaults to 0.
+Tells your window manager to decorate or not to decorate the main window.
+
+.TP 5
+\fBmainwindow_keep_above\fP: 1 or 0, defaults to 1.
+Sets whether the main window should be placed on top of other windows by your
+window manager.
+
+.TP 5
+\fBmainwindow_sticky\fP: 1 or 0, defaults to 0.
+Tells your window manager to show gsimplecal on all desktops.
+
+.TP 5
+\fBmainwindow_skip_taskbar\fP: 1 or 0, defaults to 1.
+Sets whether the main window should be shown in the task list by your panel or
+window manager.
+
+.TP 5
+\fBmainwindow_position\fP: mouse|center|none, defaults to mouse.
+Tells your window manager where to place the gsimplecal window:
+.TP 10
+     \fBmouse\fP
+.br
+close to the mouse cursor position (this one is useful when you bind gsimplecal
+on some mouse click command);
+.TP 10
+     \fBcenter\fP
+.br
+in the center of the screen;
+.TP 10
+     \fBnone\fP
+.br
+it's up to your window manager to decide, where to place the window
+(this one is useful when you bind gsimplecal invocation on some hotkey, so you
+can configure your window manager to place gsimplecal in some predefined
+position).
+
+.TP 5
+\fBclock_label\fP and \fBclock_tz\fP: string
+These two options should go in pairs and \fBmust\fP be in the order given.
+.br
+Each pair creates new clock. The clock_label variable sets the string to be
+displayed near the clock, the clock_tz sets the timezone.
+.br
+If you omit the value for clock_tz, local time will be shown.
+.br
+For a list of timezones see \fIman timezone\fP, or \fIls /usr/share/zoneinfo\fP
+
+
+.SH KEYBOARD ACCELERATORS
+.PP
+You may use the following keyboard accelerators while gsimplecal window has a focus:
+
+.IP
+Escape, Ctrl+w, Ctrl+q: close the window
+.br
+j: switch to the next month
+.br
+k: switch to the previous month
+.br
+J: jump one year forward
+.br
+K: jump one year backward
+.br
+g, Home: jump to the current date
+
+.PP
+These are not yet configurable, but I'm working on it.
+
+
+.SH REPORTING BUGS
+.PP
+Please, report any issues to the gsimplecal issue tracker, available at:
+.nh
+http://github.com/dmedvinsky/gsimplecal/issues
+.ny
+
+
+.SH AUTHOR
+Created by Dmitry Medvinsky et al.
+
+
+.SH SEE ALSO
+tzset(3),
+strftime(3)
