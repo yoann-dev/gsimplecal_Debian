@@ -1,0 +1,17 @@
+# sample gsimplecal config file
+# to be copied to $XDG_CONFIG_HOME/gsimplecal/config 
+# (usually, it will be ~/.config/gsimplescan/config)
+
+show_calendar = 1
+show_timezones = 1
+mark_today = 1
+clock_format = %a %d %b %H:%M
+mainwindow_decorated = 0
+mainwindow_keep_above = 1
+mainwindow_sticky = 0
+mainwindow_skip_taskbar = 1
+mainwindow_position = none
+clock_label = UTC
+clock_tz = :UTC
+clock_label = Local
+clock_tz =
