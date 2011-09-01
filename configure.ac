@@ -1,11 +1,9 @@
-#                                               -*- Autoconf -*-
-# Process this file with autoconf to produce a configure script.
 AC_PREREQ([2.65])
 AC_INIT([gsimplecal],
-        [0.8],
-        [http://github.com/dmedvinsky/gsimplecal/issues],
+        [0.9],
+        [https://github.com/dmedvinsky/gsimplecal/issues],
         [gsimplecal],
-        [http://github.com/dmedvinsky/gsimplecal])
+        [https://github.com/dmedvinsky/gsimplecal])
 
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 
@@ -48,9 +46,11 @@ AC_CHECK_FUNCS([atexit \
                 semget \
                 semctl \
                 ftok \
-                readlink])
+                readlink \
+                fork \
+                execl])
 
-#
+# Flags
 AM_CPPFLAGS="-Wall"
 AM_LDFLAGS="-Wl,--as-needed"
 AC_SUBST(AM_CFLAGS)
