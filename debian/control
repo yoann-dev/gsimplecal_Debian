@@ -16,12 +16,8 @@ Description: lightweight GUI calendar application
  gsimplecal is a lightweight calendar application written in C++ using GTK2.
  .
  It was intentionally made for use with tint2 panel in the openbox environment
- to be launched upon clock click, but of course it will work without it. In
- fact, binding the gsimplecal to some hotkey in you window manager will
- probably make you happy. The thing is that when it is started it first shows
- up, when you run it again it closes the running instance. In that way it is
- very easy to integrate anywhere. No need to write some wrapper scripts or
- whatever.
+ to be launched upon clock click, but can be bound to some hotkey in any window
+ manager
  .
- Also, you can configure it to not only show the calendar, but also display
+ gsimplecal can be configured to not only show the calendar, but also display
  multiple clocks for different world timezones.
