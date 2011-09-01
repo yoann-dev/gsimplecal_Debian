@@ -87,13 +87,8 @@ void Config::parseLine(string line)
     if (!line.length() || line[0] == '#') {
         return;
     }
-    int pos;
-    for (pos = line.length() - 1; pos >= 0; pos--) {
-        if (line[pos] == '=') {
-            break;
-        }
-    }
-    if (pos == -1) {
+    size_t pos = line.find_first_of('=');
+    if (pos == string::npos) {
         return;
     }
     string var = strip(line.substr(0, pos));
@@ -148,6 +143,8 @@ void Config::addOption(string var, string val)
         if (!fromString<bool>(mark_today, val)) {
             mark_today = true;
         }
+    } else if (var == "external_viewer") {
+        external_viewer = val;
     }
 }
 
