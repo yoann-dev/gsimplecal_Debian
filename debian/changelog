@@ -1,3 +1,10 @@
+gsimplecal (0.9-2) unstable; urgency=low
+
+  * Fix typo in debian/config.sample (thanks to Dmitry Medvinsky
+    <dmedvinsky@gmail.com> for spotting this)
+
+ -- Julien Valroff <julien@debian.org>  Sat, 03 Sep 2011 18:57:44 +0200
+
 gsimplecal (0.9-1) unstable; urgency=low
 
   * Initial release (Closes: #633342)
