@@ -8,7 +8,7 @@ gsimplecal (1.0-1) unstable; urgency=low
     <dmedvinsky@gmail.com> for spotting this)
   * Add new show_week_number option to configuration sample 
 
- -- Julien Valroff <julien@ares.kirya.net>  Mon, 05 Sep 2011 15:45:36 +0200
+ -- Julien Valroff <julien@debian.org>  Mon, 05 Sep 2011 15:50:15 +0200
 
 gsimplecal (0.9-1) unstable; urgency=low
 
