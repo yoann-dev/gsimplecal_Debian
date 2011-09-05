@@ -40,11 +40,9 @@ You may configure gsimplecal to display different world timezones clocks.
 To make it, you should create
 .nh
 \fB$XDG_CONFIG_HOME/gsimplecal/config\fP
-.ny
 file (usually it will be
 .nh
 ~/.config/gsimplecal/config)
-.ny
 with the following contents:
 
 .IP
@@ -54,7 +52,9 @@ show_timezones = 1
 .br
 mark_today = 1
 .br
-external_viewer = sunbird --cool-arg --date="%Y-%m-%d"
+show_week_numbers = 0
+.br
+external_viewer = sunbird -showdate "%Y-%m-%d"
 .br
 clock_format = %a %d %b %H:%M
 .br
@@ -94,6 +94,10 @@ selection, i.e. when you click on the other day, today will remain marked
 somehow, e.g. in bold print).
 
 .TP 5
+\fBshow_week_numbers\fP: 1 or 0, defaults to 0.
+Sets whether week numbers are shown in the calendar.
+
+.TP 5
 \fBexternal_viewer\fP: string, defaults to empty string.
 Command line to run when doubleclicking a date. This string is strftime'd
 (see \fIman strftime\fP for the possible substitutions)
@@ -103,7 +107,6 @@ I hope.
 Currently the shell is hardcoded to
 .nh
 /bin/sh
-.ny
 though. I hope that will do for all the users, but if you've got a trouble,
 please file a ticket (see \fIREPORTING BUGS\fP).
 
@@ -187,7 +190,6 @@ These are not yet configurable, but I'm working on it.
 Please, report any issues to the gsimplecal issue tracker, available at:
 .nh
 https://github.com/dmedvinsky/gsimplecal/issues
-.ny
 
 
 .SH AUTHOR
