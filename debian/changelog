@@ -1,3 +1,9 @@
+gsimplecal (1.0-2) unstable; urgency=low
+
+  * Use versioned DEP-5 uri 
+
+ -- Julien Valroff <julien@debian.org>  Sun, 18 Sep 2011 14:33:06 +0200
+
 gsimplecal (1.0-1) unstable; urgency=low
 
   * New upstream release:
