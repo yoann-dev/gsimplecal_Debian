@@ -1,8 +1,10 @@
 gsimplecal (1.2-1) unstable; urgency=low
 
   * New upstream release
+  * Switch to dh-autoreconf as upstream tarball does not ship configure script
+    anymore 
 
- -- Julien Valroff <julien@debian.org>  Fri, 30 Dec 2011 10:44:02 +0100
+ -- Julien Valroff <julien@debian.org>  Fri, 30 Dec 2011 11:55:38 +0100
 
 gsimplecal (1.1-1) unstable; urgency=low
 
