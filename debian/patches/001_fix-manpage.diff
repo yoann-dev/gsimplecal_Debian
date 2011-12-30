@@ -23,7 +23,7 @@ Last-Updated: 2011-12-30
  show_week_numbers = 0
  .br
 -external_viewer = sunbird -showdate "%Y-%m-%d"
-+external_viewer = sunbird -showdate "%Y\-%m\-%d"
++external_viewer = sunbird \-showdate "%Y\-%m\-%d"
  .br
  clock_format = %a %d %b %H:%M
  .br
