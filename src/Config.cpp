@@ -56,8 +56,11 @@ void Config::getDefaults()
     mainwindow_sticky = false;
     mainwindow_skip_taskbar = true;
     mainwindow_position = GTK_WIN_POS_MOUSE;
+    mainwindow_xoffset = 0;
+    mainwindow_yoffset = 0;
     mark_today = true;
     show_week_numbers = false;
+    close_on_unfocus = false;
 }
 
 bool Config::getFile()
@@ -140,6 +143,16 @@ void Config::addOption(string var, string val)
         } else {
             mainwindow_position = GTK_WIN_POS_NONE;
         }
+    } else if (var == "mainwindow_xoffset") {
+	stringstream convert(val);
+	if (!(convert >> mainwindow_xoffset)) {
+		mainwindow_xoffset = 0;
+	}
+    }  else if (var == "mainwindow_yoffset") {
+        stringstream convert(val);
+        if (!(convert >> mainwindow_yoffset)) {
+	    mainwindow_yoffset = 0;
+	}
     } else if (var == "mainwindow_resizable") {
         if (!fromString<bool>(mainwindow_resizable, val)) {
             mainwindow_resizable = true;
@@ -153,6 +166,10 @@ void Config::addOption(string var, string val)
     } else if (var == "show_week_numbers") {
         if (!fromString<bool>(show_week_numbers, val)) {
             show_week_numbers = false;
+        }
+    } else if (var == "close_on_unfocus") {
+        if (!fromString<bool>(close_on_unfocus, val)) {
+            close_on_unfocus = false;
         }
     }
 }

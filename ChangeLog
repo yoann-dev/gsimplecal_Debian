@@ -1,3 +1,12 @@
+2012-02-18: v1.4:
++ Add option to close gsimplecal when it loses focus
+
+2012-01-23: v1.3:
++ Add options for mainwindow position fine-tuning
+
+2011-12-06: v1.2:
++ Add `--version` and `--help` flags
+
 2011-09-19: v1.1:
 + Add new option: mainwindow_resizable
 

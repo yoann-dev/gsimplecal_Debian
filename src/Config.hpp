@@ -29,6 +29,7 @@ public:
     bool mark_today;
     string external_viewer;
     bool show_week_numbers;
+    bool close_on_unfocus;
 
     bool mainwindow_decorated;
     bool mainwindow_keep_above;
@@ -36,6 +37,8 @@ public:
     bool mainwindow_skip_taskbar;
     bool mainwindow_resizable;
     GtkWindowPosition mainwindow_position;
+    int mainwindow_xoffset;
+    int mainwindow_yoffset;
 
 private:
     static Config* _instance;
