@@ -1,3 +1,9 @@
+gsimplecal (1.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Julien Valroff <julien@debian.org>  Fri, 02 Mar 2012 19:01:40 +0100
+
 gsimplecal (1.2-1) unstable; urgency=low
 
   * New upstream release
