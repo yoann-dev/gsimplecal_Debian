@@ -18,9 +18,9 @@ Last-Updated: 2011-12-30
  Print the short usage help to stderr, then exit with error code 2.
  
  .TP 5
-@@ -63,7 +63,7 @@
+@@ -65,7 +65,7 @@
  .br
- show_week_numbers = 0
+ close_on_unfocus = 0
  .br
 -external_viewer = sunbird -showdate "%Y-%m-%d"
 +external_viewer = sunbird \-showdate "%Y\-%m\-%d"
