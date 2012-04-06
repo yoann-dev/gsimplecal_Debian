@@ -1,6 +1,6 @@
 AC_PREREQ([2.65])
 AC_INIT([gsimplecal],
-        [1.4],
+        [1.5],
         [https://github.com/dmedvinsky/gsimplecal/issues],
         [gsimplecal],
         [https://github.com/dmedvinsky/gsimplecal])
@@ -50,6 +50,21 @@ AC_CHECK_FUNCS([atexit \
                 readlink \
                 fork \
                 execl])
+
+# Checks for host
+AC_CANONICAL_HOST
+case $host_os in
+    *linux* | *Linux*)
+        AC_DEFINE([PROC_SELF_PATH], ["/proc/self/exe"], [Path to symlink in proc that leads to current executable.])
+        ;;
+    *bsd* | *BSD*)
+        AC_DEFINE([PROC_SELF_PATH], ["/proc/curproc/file"], [Path to symlink in proc that leads to current executable.])
+        ;;
+    *)
+        AC_MSG_ERROR([Your platform $host_os is not currently supported.
+                       Please, report this to the issue tracker.])
+        ;;
+esac
 
 # Flags
 AM_CPPFLAGS="-Wall"
