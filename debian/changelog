@@ -2,6 +2,7 @@ gsimplecal (1.6-1) unstable; urgency=low
 
   * New upstream release:
     + Add option to force LANG for changing weekdays order
+  * Make use of hardening-wrapper to enable hardening features 
 
  -- Julien Valroff <julien@debian.org>  Sat, 14 Jul 2012 10:14:36 +0200
 
