@@ -1,8 +1,6 @@
 #ifndef CONFIG_HPP
 #define CONFIG_HPP
 
-#include <iostream>
-#include <fstream>
 #include <string>
 #include <vector>
 
@@ -20,6 +18,8 @@ class Config
 {
 public:
     static Config* getInstance();
+
+    const gchar *const getPath();
 
     // options
     bool show_calendar;
@@ -48,14 +48,14 @@ private:
     template <class T> bool fromString(T& t, const string& s);
     string strip(string const& str);
 
-    std::ifstream file;
+    gchar* path;
 
 protected:
     explicit Config();
     ~Config();
 
-    void getDefaults();
-    bool getFile();
+    void setDefaults();
+    bool findPath();
     void readFile();
     void parseLine(string line);
     void addOption(string var, string val);
