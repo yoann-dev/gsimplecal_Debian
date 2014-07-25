@@ -5,6 +5,7 @@
 #include "Config.hpp"
 #include "Calendar.hpp"
 #include "Timezones.hpp"
+#include "config.h"
 
 
 bool closeCallback(GtkAccelGroup *group, GObject *obj, guint keyval,
@@ -78,7 +79,11 @@ MainWindow::MainWindow()
     }
 
     // Create box for child items
+#if HAVE_GTK_BOX_NEW
+    children_box = gtk_box_new(GTK_ORIENTATION_VERTICAL, 10);
+#else
     children_box = gtk_vbox_new(false, 10);
+#endif
 
     calendar = NULL;
     if (config->show_calendar) {
@@ -100,15 +105,15 @@ MainWindow::MainWindow()
     GtkAccelGroup *accelerators = gtk_accel_group_new();
     GClosure *closure;
 
-    Shortcut keys[] = {{GDK_Escape, 0, closeCallback},
-                       {GDK_q, GDK_CONTROL_MASK, closeCallback},
-                       {GDK_w, GDK_CONTROL_MASK, closeCallback},
-                       {GDK_j, GDK_SHIFT_MASK, nextYearCallback},
-                       {GDK_k, GDK_SHIFT_MASK, prevYearCallback},
-                       {GDK_j, 0, nextMonthCallback},
-                       {GDK_k, 0, prevMonthCallback},
-                       {GDK_g, 0, goTodayCallback},
-                       {GDK_Home, 0, goTodayCallback}};
+    Shortcut keys[] = {{GDK_KEY_Escape, 0, closeCallback},
+                       {GDK_KEY_q, GDK_CONTROL_MASK, closeCallback},
+                       {GDK_KEY_w, GDK_CONTROL_MASK, closeCallback},
+                       {GDK_KEY_j, GDK_SHIFT_MASK, nextYearCallback},
+                       {GDK_KEY_k, GDK_SHIFT_MASK, prevYearCallback},
+                       {GDK_KEY_j, 0, nextMonthCallback},
+                       {GDK_KEY_k, 0, prevMonthCallback},
+                       {GDK_KEY_g, 0, goTodayCallback},
+                       {GDK_KEY_Home, 0, goTodayCallback}};
     for (int key = 0; key < 9; key++) {
         closure = g_cclosure_new(G_CALLBACK(keys[key].func), (gpointer)this, NULL);
         gtk_accel_group_connect(accelerators, keys[key].key,
@@ -146,7 +151,7 @@ void MainWindow::updateTime()
 
 void MainWindow::close()
 {
-    gtk_signal_emit_by_name(GTK_OBJECT(widget), "destroy");
+    g_signal_emit_by_name(widget, "destroy");
 }
 
 void MainWindow::goToday()
