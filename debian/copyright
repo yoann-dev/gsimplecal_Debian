@@ -3,8 +3,8 @@ Upstream-Name: gsimplecal
 Source: https://github.com/dmedvinsky/gsimplecal
 
 Files: *
-Copyright: 2009 Dmitry Medvinsky <dmedvinsky@gmail.com>
-License: BSD-3-clause
+Copyright: 2009-2012 Dmitry Medvinsky <dmedvinsky@gmail.com>
+License: BSD-3-Clause
  Some rights reserved.
  .
  Redistribution and use in source and binary forms, with or without
