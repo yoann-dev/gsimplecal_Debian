@@ -3,7 +3,7 @@ Section: misc
 Priority: extra
 Maintainer: Julien Valroff <julien@debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, pkg-config, libgtk2.0-dev
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://dmedvinsky.github.com/gsimplecal/ 
 Vcs-Git: git://git.kirya.net/debian/gsimplecal.git
 Vcs-Browser: http://git.kirya.net/?p=debian/gsimplecal.git;a=summary
