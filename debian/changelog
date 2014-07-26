@@ -10,6 +10,7 @@ gsimplecal (2.0-1) UNRELEASED; urgency=medium
   * d/watch: Move away from the github redirect, no longer needed.
   * Update to standards-version 3.9.5.
   * d/control: Update build-dep and description for GTK3.
+  * d/control: Update VCS links to use collab-maint.
 
  -- Unit 193 <unit193@ubuntu.com>  Sat, 26 Jul 2014 13:21:40 -0400
 
