@@ -1,6 +1,7 @@
 gsimplecal (2.0-1) UNRELEASED; urgency=medium
 
   * QA upload.
+  * Update maintainer to Debian QA Group.
   * Imported Upstream version 2.0
   * d/copyright: Update copyright years.
   * d/control, d/compat: Update to debhelper compat 9.

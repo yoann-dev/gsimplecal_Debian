@@ -1,7 +1,7 @@
 Source: gsimplecal
 Section: misc
 Priority: extra
-Maintainer: Julien Valroff <julien@debian.org>
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Build-Depends: debhelper (>= 9), dh-autoreconf, pkg-config, libgtk-3-dev
 Standards-Version: 3.9.5
 Homepage: http://dmedvinsky.github.com/gsimplecal/ 
