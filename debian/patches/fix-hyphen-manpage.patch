@@ -1,0 +1,15 @@
+Description: Fix hyphen error in manpage gsimplecal.1
+Author: Yoann Gauthier <yoann.gauthier9@gmail.com>
+Applied-Upstream: 2.0
+Last-Update: 2015-05-03
+--- a/doc/gsimplecal.1
++++ b/doc/gsimplecal.1
+@@ -163,7 +163,7 @@
+ 
+     LANG=en_GB.utf8 gsimplecal
+ 
+-Must be one of \fIlocale -a\fP output.
++Must be one of \fIlocale \-a\fP output.
+ 
+ .TP 5
+ \fBmainwindow_decorated\fP: 1 or 0, defaults to 0.
